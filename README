@@ -46,7 +46,9 @@ gmond has to have permissions to read the heartbeat.log file, if
 gmond is running with user "nobody" it may not be possible to read the log file
 a workaround is to run gmond under user "storm". Security implications are
 still to be evaluated.
-	Edit: /etc/ganglia/gmond.conf and change "user = nobody" by  "user = storm", before restarting gmond
+	Edit: /etc/ganglia/gmond.conf and change
+	      "user = nobody" by 
+	      "user = storm", before restarting gmond
 
 Compilation - this is needed if you have ganglia 3.2.0:
 =======================================================
@@ -63,7 +65,9 @@ Run the script:
 Further information
 ===================
 
-Information on StoRM and the administrator manual, containing a description a of heartbeat.log:
-http://storm.forge.cnaf.infn.it/
-http://storm.forge.cnaf.infn.it/_media/documentation/storm-1.8.0-sysadminguide.pdf?id=documentation%3Ahome&cache=cache
+Information on StoRM and the administrator manual, containing a description a of
+heartbeat.log:
+
+- http://storm.forge.cnaf.infn.it/
+- http://storm.forge.cnaf.infn.it/_media/documentation/storm-1.8.0-sysadminguide.pdf?id=documentation%3Ahome&cache=cache
 
