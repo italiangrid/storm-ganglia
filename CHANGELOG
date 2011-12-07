@@ -1,0 +1,8 @@
+storm-ganglia CHANGELOG
+-----------------
+
+** v1.0.1-1 : 23 Nov. 2011 - Mario David (david@lip.pt)
+- Description of metrics in the graphics with "\(" ..- "\)"
+
+** v1.0.0-1 : 22 Nov. 2011 - Mario David (david@lip.pt)
+-First release of modstorm
