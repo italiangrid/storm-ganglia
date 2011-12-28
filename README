@@ -12,14 +12,15 @@ StoRM is an implementations of a "Storage Resource Manager" (SRM) version
 
 The "storm-ganglia" module collects several metrics taken from one of the
 StoRM log files, namely the "heartbeat.log". The collected metrics are the
-"Heap free" memory (in bytes), the number of asynchronous "Prepare to Put (PTP)"
-and "Prepare To Get (PTG)" requests, the number of synchronous requests,
-the average time for the synchronous requests, and the number of failed requests.
+"Heap free" memory (in bytes), the number synchronous requests, the number of
+asynchronous "Prepare to Put (PTP)" and "Prepare To Get (PTG)" requests, the
+number of synchronous requests, the average time for the synchronous requests,
+and the number of failed requests.
 
 This set of metrics allows to have a glance on the service's load in terms of
 number of SRM requests, as well as if there is any failure in the service.  
 
-The heartbeat log file is updated on a regular basis with a new line containing
+The heartbeat.log file is updated on a regular basis with a new line containing
 the summary of collected metrics. The default timeframe is one minute.
 
 The "storm-ganglia" package includes the module itself as a shared library and
@@ -28,29 +29,34 @@ the gmond configuration file.
 Installation:
 =============
 
-The tarball contains the source code and a pre-compiled .so module.
-To be installed in the StoRM frontend machine.
-- Compiled in SL5 x86_64
-- Ganglia 3.1.7
+There are two tarballs containing the a pre-compiled .so module and a gmond
+config file. To be installed in the StoRM backend machine:
 
-	# tar zxvf ganglia-storm-module-1.0.0-1.tgz
-	# cd ganglia-storm-module
-	# cp modstorm.so /usr/lib64/ganglia/
-	# cp storm_mon.conf /etc/ganglia/conf.d/
+	- storm-ganglia_ganglia317-1.0.2-1.tgz
+		- Compiled in SL5 x86_64
+		- Ganglia 3.1.7
+
+	- storm-ganglia_ganglia320-1.0.2-1.tgz
+		- Compiled in SL5 x86_64
+		- Ganglia 3.2.0
+
+If you download any of those tgz:
+	# cp storm-ganglia_ganglia317-1.0.2-1.tgz /
+	# tar zxvf storm-ganglia_ganglia317-1.0.2-1.tgz
 	# /etc/init.d/gmond restart
 
 Known issues:
 =============
 
-gmond has to have permissions to read the heartbeat.log file, if
-gmond is running with user "nobody" it may not be possible to read the log file
-a workaround is to run gmond under user "storm". Security implications are
-still to be evaluated.
+gmond has to have permissions to read the heartbeat.log file, if gmond is
+running with user "nobody" it may not be possible to read the log file a
+workaround is to run gmond under user "storm". Security implications are still
+to be evaluated.
 	Edit: /etc/ganglia/gmond.conf and change
 	      "user = nobody" by 
 	      "user = storm", before restarting gmond
 
-Compilation - this is needed if you have ganglia 3.2.0:
+Compilation:
 =======================================================
 
 You need to install:
@@ -60,7 +66,7 @@ You need to install:
 	- libconfuse-devel
 
 Run the script:
-	# ./comp.sh
+	# ./comp-mod.sh
 
 Further information
 ===================

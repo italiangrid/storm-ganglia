@@ -1,0 +1,16 @@
+storm-ganglia CHANGELOG
+-----------------
+
+** v1.0.2-1 : 28 Dec. 2011 - Mario David (david@lip.pt)
+- Changed the metric to get he last line of the heartbeat.log
+- Added metric "Number of Synchronous requests"
+- Corrected english errors
+- Corrected Synchronous PTP and PTG with wrong metric index position
+- Corrected the log line part "[#..3042 " is a string with 6 chars not an int
+- Added tarbals with pre-compiled modules for ganglia 3.1.7 and 3.2.0
+
+** v1.0.1-1 : 23 Nov. 2011 - Mario David (david@lip.pt)
+- Description of metrics in the graphics with "\(" ..- "\)"
+
+** v1.0.0-1 : 22 Nov. 2011 - Mario David (david@lip.pt)
+-First release of modstorm
