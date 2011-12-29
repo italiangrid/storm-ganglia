@@ -1,6 +1,7 @@
 storm-ganglia CHANGELOG
 -----------------
 
+<<<<<<< HEAD
 ** v1.0.2-1 : 28 Dec. 2011 - Mario David (david@lip.pt)
 - Changed the metric to get he last line of the heartbeat.log
 - Added metric "Number of Synchronous requests"
@@ -9,6 +10,8 @@ storm-ganglia CHANGELOG
 - Corrected the log line part "[#..3042 " is a string with 6 chars not an int
 - Added tarbals with pre-compiled modules for ganglia 3.1.7 and 3.2.0
 
+=======
+>>>>>>> e2d54141a07b133103947f25590afbe7d7aa23f5
 ** v1.0.1-1 : 23 Nov. 2011 - Mario David (david@lip.pt)
 - Description of metrics in the graphics with "\(" ..- "\)"
 
