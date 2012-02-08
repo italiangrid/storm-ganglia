@@ -32,17 +32,17 @@ Installation:
 There are two tarballs containing the a pre-compiled .so module and a gmond
 config file. To be installed in the StoRM backend machine:
 
-	- storm-ganglia_ganglia317-1.0.2-1.tgz
+	- storm-ganglia_ganglia317-1.0.3-1.tgz
 		- Compiled in SL5 x86_64
 		- Ganglia 3.1.7
 
-	- storm-ganglia_ganglia320-1.0.2-1.tgz
+	- storm-ganglia_ganglia320-1.0.3-1.tgz
 		- Compiled in SL5 x86_64
 		- Ganglia 3.2.0
 
 If you download any of those tgz:
-	# cp storm-ganglia_ganglia317-1.0.2-1.tgz /
-	# tar zxvf storm-ganglia_ganglia317-1.0.2-1.tgz
+	# cp storm-ganglia_ganglia317-1.0.3-1.tgz /
+	# tar zxvf storm-ganglia_ganglia317-1.0.3-1.tgz
 	# /etc/init.d/gmond restart
 
 Known issues:
@@ -75,5 +75,5 @@ Information on StoRM and the administrator manual, containing a description a of
 heartbeat.log:
 
 - http://storm.forge.cnaf.infn.it/
-- http://storm.forge.cnaf.infn.it/_media/documentation/storm-1.8.0-sysadminguide.pdf?id=documentation%3Ahome&cache=cache
+- http://storm.forge.cnaf.infn.it/documentation/home
 
